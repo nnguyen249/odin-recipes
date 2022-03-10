@@ -23,14 +23,15 @@
     </style>
     <script>
         function preview_food(link){
-            document.getElementById("food_picture").InnerHtml=<a href=link
+            document.getElementById("food_picture").InnerHtml.href=link;
+            document.getElementById("list_food_picture").style.visibility="visible";
 
         }
     <body>
         <h1> Recipes </h1>
         <ul>
             <li><strong>Italian Dinner</stong></li>
-            <li id="food_picture" style="visibility:hidden;"></li>
+            <li id="list_food_picture" style="visibility:hidden;"><img id = "food_picture" src="" alt="Picture of Recipe Food"></li>
             <li><button type="button" onclick="location.href='./spaghetti'" onMouseOver="preview_food()">Spaghetti Sauce with Ground Beef</button></li>
             <li><button type="button" onclick="location.href='./garlic_bread'">Garlic Bread</button></li>
             <li><button type="button" onclick="location.href='./alfredo_sauce'">Alfredo Sauce</button><li>
